@@ -21,7 +21,7 @@ const studentSchema =  new Schema({
     currentSem:{
         type: Number, 
         required: [true, 'Semiter is required'],
-        maxlength: 1
+        maxlength: 2
     },
     batch:{ 
         type:String,
@@ -34,10 +34,36 @@ const studentSchema =  new Schema({
         maxlength: 10
     },
     DOB:{
-        type:Date,
+        type:String,
         required: [true, 'Date of Birth is required']
+    },
+    gender:{
+        type: String,
+        required: true,
+        maxlength: 1
+    },
+
+    parentDetails : {
+            fatherName: {
+                type: String
+            },
+            fatherOccupation:{
+                type: String
+            },
+            fatherAge:{
+                type: Number
+            },
+            fatherIncome:{
+                type: Number
+            },
+
+            motherName: {
+                type: String
+            },
+
     }
-    });
+});
+
 
 const Student = mongoose.model('Student', studentSchema);
 module.exports = Student;

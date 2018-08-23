@@ -17,8 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-
-app.post('/api/enroll', (req , res, next) =>{
+app.post('/enroll', (req , res, next) =>{
     Student.create(req.body).then((student) => {
         res.send(student);
     }).catch(next);
