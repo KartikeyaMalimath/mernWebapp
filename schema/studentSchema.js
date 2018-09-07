@@ -70,7 +70,7 @@ const studentSchema =  new Schema({
             },
             incomeClaim: {
                 required:true,
-                type:Boolean
+                type:String
             },
             //Mother Details
             motherName: {
@@ -223,24 +223,203 @@ const studentSchema =  new Schema({
             type: String
         }
     },
+    admissionDetails: {
+        entranceExam: {
+            type: String,
+            required: true
+        },
+        //date of admission better to use date.now function for better results
+        admissionDate: {
+            type: String
+        },
+        batch: {
+
+        }
+    },
     academicHistory: {
-        schoolName: {
-            type: String,
-            required: true
+        school:{
+            schoolName: {
+                type: String,
+                required: true
+            },
+            schoolBoard: {
+                type: String,
+                required: true
+            },
+            schoolTown: {
+                type: String,
+                required: true
+            },
+            schoolState: {
+                type: String,
+                required: true
+            },
+            //10th exam roll number
+            schoolRegNo : {
+                type: String,
+            },
+            schoolPassYear: {
+                type: Number,
+                required: true
+            },
+            schoolMarkscardNo: {
+                type: String
+            },
+            //english, kannada etc
+            schoolMedium: {
+                type: String
+            },
+            //10 or 625 or 600
+            schoolMaxMarks: {
+                type: Number
+            },
+            //marks obtained
+            schoolMarks: {
+                type: Number
+            },
+            //percentage obtained
+            schoolAggregate: {
+                type: String
+            }
         },
-        schoolBoard: {
-            type: String,
-            required: true
+        puc: {
+            collegeName: {
+                type: String
+            },
+            collegeBoard : {
+                type: String
+            },
+            collegeTown : {
+                type: String
+            },
+            collegeState: {
+                type: String
+            },
+            collegeCountry: {
+                type: String
+            },
+            collegePassYear : {
+                type: Number
+            },
+            //12th exam roll number
+            collegeRegNo : {
+                type: String
+            },
+            //12th exam max marks 600
+            collegeMaxMarks : {
+                type: Number
+            },
+            collegeMarks: {
+                type: Number
+            },
+            collegeAggregate: {
+                type: String
+            },
+            collegeMarkscardNo: {
+                type: String
+            },
+            //english kannada etc
+            collegeMedium: {
+                type: String
+            },
+            attempts: {
+                type: Number
+            },
+            //3 subjects of puc : PCM or PMCs etc max marks
+            sub1MaxMarks: {
+                type: Number
+            },
+            sub2MaxMarks: {
+                type: Number
+            },
+            sub3MaxMarks: {
+                type: Number
+            },
+            //3 subjects of puc: PCM or PMCs marks obtained
+            sub1Marks: {
+                type: Number
+            },
+            sub2Marks: {
+                type: Number
+            },
+            sub3Marks: {
+                type: Number
+            },
+        }
+    },
+    documents: {
+        // CET/ COMEDK admission letter
+        entranceOrginal: {
+            type: Number
         },
-        schoolTown: {
-            type: String,
-            required: true
+        entranceCopy: {
+            type: Number
         },
-        schoolState: {
-            type: String,
-            required: true
+        //sslc marks card
+        sslcOrginal: {
+            type: Number
         },
+        sslcCopy: {
+            type: Number
+        },
+        //puc or equivalent marks card
+        collegeOrginal: {
+            type: Number
+        },
+        collegeCopy: {
+            type: Number
+        },
+        //caste-income-reservation certificates
+        reservationOrginal: {
+            type: Number
+        },
+        reservationCopy: {
+            type: Number
+        },
+        //handicap, ncc, scouts and guides, sports, defence
+        specialOrginal : {
+            type: Number
+        },
+        specialCopy : {
+            type: Number
+        },
+        // SC/ ST/ OBC Reservation certificate
+        scstobcOrginal : {
+            type: Number
+        },
+        scstobcCopy: {
+            type: Number
+        },
+        //migration Certificate
+        migrationOrginal : {
+            type: Number
+        },
+        migrationCopy: {
+            type: Number
+        },
+        //Transfer Certificate
+        migrationOrginal: {
+            type: Number
+        },
+        migrationCopy: {
+            type: Number
+        },
+        //study Certificate
+        studyOrginal : {
+            type: Number
+        },
+        studyCopy: {
+            type: Number
+        },
+        //Any other certificates
+        otherOrginal: {
+            type: Number
+        },
+        otherCopy: {
+            type: Number
+        }
     }
+
 });
 
 
