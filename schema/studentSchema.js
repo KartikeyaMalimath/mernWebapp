@@ -22,7 +22,7 @@ const studentSchema =  new Schema({
     },
     currentSem:{
         type: Number, 
-        required: [true, 'Semiter is required'],
+        required: [true, 'Semester is required'],
         maxlength: 2
     },
     batch:{ 
@@ -233,7 +233,25 @@ const studentSchema =  new Schema({
             type: String
         },
         batch: {
-
+            type: String
+        },
+        admissionOrder: {
+            type: Number
+        },
+        seatCatagoryAlloted: {
+            type: String
+        },
+        seatCatagoryClaimed: {
+            type: String
+        },
+        collegeCode: {
+            type: String
+        },
+        degreeLevel: {
+            type: String
+        },
+        jeeRank : {
+            type: String
         }
     },
     academicHistory: {
